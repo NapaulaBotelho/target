@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sequência de Fibonacci</title>
+  </head>
+  <body>
+     <!-- Resposta da pergunta 2 de 3 -->
+
+    <!-- 2.4 -->
+    
+
+    <script>
+
+            // Define o valor de faturamento mensal por estado
+        let faturamentoEstados = {
+            "SP": 67836.43,
+            "RJ": 36678.66,
+            "MG": 29229.88,
+            "ES": 27165.48,
+            "Outros": 19849.53
+        };
+        
+        // Calcula o valor total mensal da distribuidora
+        let totalFaturamento = 0;
+        for (let estado in faturamentoEstados) {
+            totalFaturamento += faturamentoEstados[estado];
+        }
+        
+        // Calcula o percentual de representação de cada estado no valor total mensal da distribuidora
+        let percentuais = {};
+        for (let estado in faturamentoEstados) {
+            percentuais[estado] = (faturamentoEstados[estado] / totalFaturamento) * 100;
+        }
+        
+        // Exibe os percentuais de representação de cada estado
+        for (let estado in percentuais) {
+            console.log(estado + ": " + percentuais[estado].toFixed(2) + "%");
+        }
+
+    </script>
+
+  </body>
+
+  </html>
+
+
+  
